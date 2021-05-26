@@ -19,7 +19,9 @@ public class Printer implements Runnable {
 
 class Main3 {
     public static void main(String[] args) {
-        new Thread(new Printer("Good!")).start();
+        for (int i = 0; i < 10000; i++) {
+            new Thread(new Printer("Good!")).start();
+        }
         new Thread(new Printer("Nice!")).start();
         
     }
